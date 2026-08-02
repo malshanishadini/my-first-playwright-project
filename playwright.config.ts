@@ -37,6 +37,17 @@ export default defineConfig({
       slowMo: 500,           // Slow down actions by 1000ms
     },
     acceptDownloads: true, // Enable file downloads
+
+     // Base URL for API requests
+    baseURL: "https://reqres.in",
+
+    // HTTP headers sent with every request
+    extraHTTPHeaders: {
+      Accept: "application/json",
+      "x-api-key":
+        process.env.REQRES_API_KEY ??
+        "free_user_3E75Ai3rComzXI0NWpSXIL6LG7b",
+    },
   },
 
   /* Configure projects for major browsers */
